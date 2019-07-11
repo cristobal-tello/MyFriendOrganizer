@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MyFriendOrganizer.UI.Data
 {
-    public class FriendDataService
+    public class FriendDataService : IFriendDataService
     {
-        IEnumerable<Friend> GetAll()
+        public IEnumerable<Friend> GetAll()
         {
             yield return new Friend { FirstName = "Leo", LastName = "Messi" };
             yield return new Friend { FirstName = "Cristiano", LastName = "Ronaldo" };
