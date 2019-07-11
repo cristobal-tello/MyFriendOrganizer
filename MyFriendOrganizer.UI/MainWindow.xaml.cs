@@ -9,12 +9,13 @@ namespace MyFriendOrganizer.UI
 
         public MainWindow(MainViewModel viewModel)
         {
-            this.viewModel = viewModel;
             InitializeComponent();
+            this.viewModel = viewModel;
+            this.Loaded += OnLoad;
             this.DataContext = this.viewModel;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void OnLoad(object sender, RoutedEventArgs e)
         {
             viewModel.Load();
         }

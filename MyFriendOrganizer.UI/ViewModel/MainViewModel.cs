@@ -15,7 +15,8 @@ namespace MyFriendOrganizer.UI.ViewModel
 
         public void Load()
         {
-            Friends = new ObservableCollection<Friend>(friendDataService.GetAll()); ;
+            this.Friends = new ObservableCollection<Friend>(friendDataService.GetAll());
+            OnPropertyChanged("Friends");
         }
 
         public ObservableCollection<Friend> Friends { get; set; }
