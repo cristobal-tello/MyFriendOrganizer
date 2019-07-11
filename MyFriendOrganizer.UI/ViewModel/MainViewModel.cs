@@ -4,9 +4,9 @@ using System.Collections.ObjectModel;
 
 namespace MyFriendOrganizer.UI.ViewModel
 {
-    class MainViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
-        IFriendDataService friendDataService;
+        private IFriendDataService friendDataService;
 
         public MainViewModel(IFriendDataService friendDataService)
         {
